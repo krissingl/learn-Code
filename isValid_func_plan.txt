@@ -1,0 +1,47 @@
+// Is the Set Valid?
+
+public struct Card {
+    public enum Shape
+    public enum Color
+    public enum Fill
+    [Range(1, 3)]
+    public int Number  
+}
+
+Card.Shape enums = ["Diamond", "Pill", "Noodle"];
+Card.Color enums = ["Red", "Green", "Purple"];
+Card.Fill enums = ["Empty", "Shaded", "Solid"];
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// LOGIC BEHIND A VALID SET:
+// Every property (shape, color, fill, and number) across the three selected cards must either be all the same or all different
+
+// VALID EXAMPLE
+/* IE: [
+    {Shape:"Pill", Color:"Red", Fill:"Empty", Number:1},
+    {Shape:"Pill", Color:"Red", Fill:"Shaded", Number:2},
+    {Shape:"Pill", Color:"Red", Fill:"Solid", Number:3}
+] */
+// Shape and color for all three properties are the same, and Fill and Number properties are all different
+
+INVALID EXAMPLE
+/* IE: [
+    {Shape:"Diamond", Color:"Red", Fill:"Empty", Number:2},
+    {Shape:"Pill", Color:"Red", Fill:"Shaded", Number:2},
+    {Shape:"Pill", Color:"Red", Fill:"Solid", Number:3}
+] */
+// Shape and Number are different, but only for one card.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+public class Set {
+    public bool IsValid();
+    public unknown SetCardList(unknown); // a data structure that has the three selected cards in it
+    public unknown checkValidicityOfSetCardList(unknown)
+    {
+    // Need to build a function that takes SetCardList and uses logic to check if it is a set and sets isValid bool
+      // Use counter object {shape: 0, color: 0, fill: 0, Number: 0}
+      // Upon iteration, must check each card property to see if a type of property exists only once or exists thrice
+        //First instance that this is not the case, the cardList is NOT a set isValid = false
+      // iterate through SetCardList
+    }
+}
